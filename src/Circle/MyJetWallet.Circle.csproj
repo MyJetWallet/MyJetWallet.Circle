@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <Description>Circle.Net is a .Net wrapper for the Circle API v1. It includes all features that the API provides.</Description>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/MyJetWallet/MyJetWallet.Circle</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/MyJetWallet/MyJetWallet.Circle</RepositoryUrl>
+        <PackageTags>Circle Circle.Net C# .Net CryptoCurrency Wallet Exchange Rest API Wrapper</PackageTags>
+        <NeutralLanguage>en</NeutralLanguage>
+        <Version>1.0.0</Version>
+        <RootNamespace>MyJetWallet.Circle</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
+    </ItemGroup>
+
+</Project>
