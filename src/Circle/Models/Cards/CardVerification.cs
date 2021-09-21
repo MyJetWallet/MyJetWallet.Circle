@@ -1,10 +1,15 @@
-﻿using Newtonsoft.Json;
+﻿using System.Runtime.Serialization;
+using Newtonsoft.Json;
 
 namespace MyJetWallet.Circle.Models.Cards
 {
+    [DataContract]
     public class CardVerification
     {
-        [JsonProperty("avs")] public string Avs { get; internal set; }
-        [JsonProperty("cvv")] public string Cvv { get; internal set; }
+        [JsonProperty("avs"), DataMember(Order = 1)]
+        public string Avs { get; internal set; }
+
+        [JsonProperty("cvv"), DataMember(Order = 2)]
+        public string Cvv { get; internal set; }
     }
 }
