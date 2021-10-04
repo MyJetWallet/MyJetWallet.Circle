@@ -57,17 +57,15 @@ namespace MyJetWallet.Circle.Models
             }
         }
 
-        public WebCallResult(HttpResponseMessage response, CallResult<T> result) : base(result.Data, result.Code,
+        public WebCallResult(HttpResponseMessage response, CallResult<T> result) : base(result.Data,
+            (int)response.StatusCode,
             result.Message)
         {
-            if (response != null)
+            ResponseStatusCode = response.StatusCode;
+            ResponseHeaders = new Dictionary<string, string>();
+            foreach (var header in response.Headers)
             {
-                ResponseStatusCode = response?.StatusCode;
-                ResponseHeaders = new Dictionary<string, string>();
-                foreach (var header in response.Headers)
-                {
-                    ResponseHeaders.Add(header.Key, string.Join(";", header.Value));
-                }
+                ResponseHeaders.Add(header.Key, string.Join(";", header.Value));
             }
         }
 

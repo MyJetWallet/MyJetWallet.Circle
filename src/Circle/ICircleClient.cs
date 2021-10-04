@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MyJetWallet.Circle.Models;
 using MyJetWallet.Circle.Models.Cards;
+using MyJetWallet.Circle.Models.Subscriptions;
 
 namespace MyJetWallet.Circle
 {
@@ -140,6 +141,50 @@ namespace MyJetWallet.Circle
             string encryptedData,
             int expMonth,
             int expYear,
+            CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region Subscriptions
+
+        /// <summary>
+        /// Get a list of notification subscriptions.
+        /// </summary>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        WebCallResult<List<Subscription>> GetListOfSubscriptions(
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<List<Subscription>>> GetListOfSubscriptionsAsync(
+            CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Subscribe to receiving notifications at a given endpoint. The endpoint should be able to handle AWS SNS subscription requests. For more details see https://docs.aws.amazon.com/mobile/sdkforxamarin/developerguide/sns-send-http.html.
+        /// Note, the sandbox environment allows a maximum of 3 active subscriptions; otherwise, this is limited to 1 active subscription and subsequent create requests will be rejected with a Limit Exceeded error.
+        /// </summary>
+        /// <param name="endpoint">URL of the subscriber endpoint. Must be publicly accessible and utilize HTTPS.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        WebCallResult<Subscription> CreateSubscription(
+            string endpoint,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<Subscription>> CreateSubscriptionAsync(
+            string endpoint,
+            CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// To remove a subscription, all its subscription requests' statuses must be either 'confirmed', 'deleted' or a combination of those. A subscription with at least one 'pending' subscription request cannot be removed.
+        /// </summary>
+        /// <param name="id">Unique identifier for the subscription.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        WebCallResult<string> RemoveSubscription(
+            string id,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<string>> RemoveSubscriptionAsync(
+            string id,
             CancellationToken cancellationToken = default);
 
         #endregion

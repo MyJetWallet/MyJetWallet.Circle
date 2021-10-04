@@ -11,7 +11,7 @@ namespace MyJetWallet.Circle.Models.Cards
         public string Id { get; internal set; }
 
         [JsonProperty("status"), JsonConverter(typeof(CardStatusConverter)), DataMember(Order = 2)]
-        public string Status { get; internal set; }
+        public CardStatus Status { get; internal set; }
 
         [JsonProperty("billingDetails"), DataMember(Order = 3)]
         public CardBillingDetails BillingDetails { get; internal set; }
