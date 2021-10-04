@@ -10,6 +10,6 @@ namespace MyJetWallet.Circle.Models.Cards
         [JsonProperty("billingDetails")] public CardBillingDetails BillingDetails { get; internal set; }
         [JsonProperty("expMonth")] public int ExpMonth { get; internal set; }
         [JsonProperty("expYear")] public int ExpYear { get; internal set; }
-        [JsonProperty("metadata")] public CardMetadata Metadata { get; internal set; }
+        [JsonProperty("metadata")] public Metadata Metadata { get; internal set; }
     }
 }

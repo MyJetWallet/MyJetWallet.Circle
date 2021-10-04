@@ -47,10 +47,10 @@ namespace MyJetWallet.Circle.Models.Cards
         public CardVerification Verification { get; internal set; }
 
         [JsonProperty("riskEvaluation"), DataMember(Order = 14)]
-        public CardRiskEvaluation RiskEvaluation { get; internal set; }
+        public RiskEvaluation RiskEvaluation { get; internal set; }
 
         [JsonProperty("metadata"), DataMember(Order = 15)]
-        public CardMetadata Metadata { get; internal set; }
+        public Metadata Metadata { get; internal set; }
 
         [JsonProperty("createDate"), DataMember(Order = 16)]
         public string CreateDate { get; internal set; }

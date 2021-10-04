@@ -1,10 +1,10 @@
 ﻿using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace MyJetWallet.Circle.Models.Cards
+namespace MyJetWallet.Circle.Models
 {
     [DataContract]
-    public class CardRiskEvaluation
+    public class RiskEvaluation
     {
         [JsonProperty("decision"), DataMember(Order = 1)]
         public string Decision { get; internal set; }

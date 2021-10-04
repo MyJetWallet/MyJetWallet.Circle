@@ -24,7 +24,8 @@ namespace MyJetWallet.Circle.Models
         /// <summary>
         /// Whether the call was successful
         /// </summary>
-        public bool Success => Code == (int)HttpStatusCode.OK;
+        public bool Success =>
+            Code is (int)HttpStatusCode.OK or (int)HttpStatusCode.Created or (int)HttpStatusCode.Accepted;
 
         public CallResult(T data, int code, string message)
         {

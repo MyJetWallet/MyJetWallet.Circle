@@ -88,7 +88,7 @@ namespace MyJetWallet.Circle
                 },
                 ExpMonth = expMonth,
                 ExpYear = expYear,
-                Metadata = new CardMetadata
+                Metadata = new Metadata
                 {
                     Email = email,
                     PhoneNumber = phoneNumber,
