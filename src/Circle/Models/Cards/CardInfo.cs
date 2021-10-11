@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿#nullable enable
+using System.Runtime.Serialization;
 using MyJetWallet.Circle.Converters;
 using Newtonsoft.Json;
 
@@ -41,7 +42,7 @@ namespace MyJetWallet.Circle.Models.Cards
         public string Fingerprint { get; internal set; }
 
         [JsonProperty("errorCode"), JsonConverter(typeof(CardVerificationErrorConverter)), DataMember(Order = 12)]
-        public CardVerificationError ErrorCode { get; internal set; }
+        public CardVerificationError? ErrorCode { get; internal set; }
 
         [JsonProperty("verification"), DataMember(Order = 13)]
         public CardVerification Verification { get; internal set; }
