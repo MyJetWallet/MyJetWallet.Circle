@@ -3,6 +3,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using MyJetWallet.Circle.Models;
 using MyJetWallet.Circle.Models.Cards;
+using MyJetWallet.Circle.Models.Onchain;
 using MyJetWallet.Circle.Models.Payments;
 using MyJetWallet.Circle.Models.Subscriptions;
 
@@ -254,6 +255,97 @@ namespace MyJetWallet.Circle
 
         Task<WebCallResult<PaymentInfo>> GetPaymentAsync(
             string id,
+            CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region onchain
+
+        /// <summary>
+        /// Retrieves general configuration information.
+        /// </summary>
+        /// <returns></returns>
+        WebCallResult<Configuration> GetConfiguration(
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<Configuration>> GetConfigurationAsync(
+            CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Generates a new blockchain address for a wallet for a given currency/chain pair.
+        /// Circle may reuse addresses on blockchains that support reuse. For example, if you're requesting two addresses for depositing USD and ETH, both on Ethereum, you may see the same Ethereum address returned.
+        /// Depositing cryptocurrency to a generated address will credit the associated wallet with the value of the deposit.
+        /// </summary>
+        /// <param name="id">Unique id of a wallet.</param>
+        /// <param name="idempotencyKey">Unique idempotency key. This key is utilized to ensure exactly-once execution of mutating requests.</param>
+        /// <param name="currency">A currency associated with a balance or address. CUSDC is currently only supported in the Sandbox environment.</param>
+        /// <param name="chain">A blockchain that a given currency is available on.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        WebCallResult<BlockchainAddress> GenerateAddress(
+            string id,
+            string idempotencyKey,
+            string currency,
+            string chain,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<BlockchainAddress>> GenerateAddressAsync(
+            string id,
+            string idempotencyKey,
+            string currency,
+            string chain,
+            CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Get a transfer.
+        /// </summary>
+        /// <param name="id">Unique identifier of the transfer.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        WebCallResult<PaymentInfo> GetTransfer(
+            string id,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<PaymentInfo>> GetTransferAsync(
+            string id,
+            CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Create a transfer.
+        /// </summary>
+        /// <param name="idempotencyKey">Unique idempotency key. This key is utilized to ensure exactly-once execution of mutating requests.</param>
+        /// <param name="sourceId">Unique identifier for the source.</param>
+        /// <param name="sourceType">Type of the source.</param>
+        /// <param name="dstType"></param>
+        /// <param name="dstAddress">The blockchain address.</param>
+        /// <param name="dstAddressTag">The secondary identifier for a blockchain address. An example of this is the memo field on the Stellar network, which can be text, id, or hash format.</param>
+        /// <param name="dstChain">A blockchain that a given currency is available on.</param>
+        /// <param name="amount">Magnitude of the amount, in units of the currency, with a ..</param>
+        /// <param name="currency">Currency code.</param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
+        WebCallResult<PaymentInfo> CreateTransfer(
+            string idempotencyKey,
+            string sourceId,
+            string sourceType,
+            string dstType,
+            string dstAddress,
+            string dstAddressTag,
+            string dstChain,
+            string amount,
+            string currency,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<PaymentInfo>> CreateTransferAsync(
+            string idempotencyKey,
+            string sourceId,
+            string sourceType,
+            string dstType,
+            string dstAddress,
+            string dstAddressTag,
+            string dstChain,
+            string amount,
+            string currency,
             CancellationToken cancellationToken = default);
 
         #endregion

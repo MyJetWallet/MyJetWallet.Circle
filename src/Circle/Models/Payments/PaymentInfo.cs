@@ -60,5 +60,11 @@ namespace MyJetWallet.Circle.Models.Payments
 
         [JsonProperty("updateDate"), DataMember(Order = 18)]
         public string UpdateDate { get; internal set; }
+
+        [JsonProperty("transactionHash"), DataMember(Order = 19)]
+        public string TransactionHash { get; internal set; }
+
+        [JsonProperty("destination"), DataMember(Order = 20)]
+        public PaymentDestination Destination { get; internal set; }
     }
 }
