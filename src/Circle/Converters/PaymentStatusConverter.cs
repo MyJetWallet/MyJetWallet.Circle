@@ -18,6 +18,7 @@ namespace MyJetWallet.Circle.Converters
         {
             new KeyValuePair<PaymentStatus, string>(PaymentStatus.Pending, "pending"),
             new KeyValuePair<PaymentStatus, string>(PaymentStatus.Confirmed, "confirmed"),
+            new KeyValuePair<PaymentStatus, string>(PaymentStatus.Complete, "complete"),
             new KeyValuePair<PaymentStatus, string>(PaymentStatus.Paid, "paid"),
             new KeyValuePair<PaymentStatus, string>(PaymentStatus.Failed, "failed"),
             new KeyValuePair<PaymentStatus, string>(PaymentStatus.ActionRequired, "action_required")
