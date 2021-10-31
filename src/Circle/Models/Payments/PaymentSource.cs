@@ -11,5 +11,8 @@ namespace MyJetWallet.Circle.Models.Payments
 
         [JsonProperty("type"), DataMember(Order = 2)]
         public string Type { get; set; }
+
+        [JsonProperty("chain"), DataMember(Order = 3)]
+        public string Chain { get; set; }
     }
 }
