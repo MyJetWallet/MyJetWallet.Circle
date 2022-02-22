@@ -6,6 +6,7 @@ using MyJetWallet.Circle.Models.Cards;
 using MyJetWallet.Circle.Models.Onchain;
 using MyJetWallet.Circle.Models.Payments;
 using MyJetWallet.Circle.Models.Subscriptions;
+using MyJetWallet.Circle.Models.WireTransfers;
 
 namespace MyJetWallet.Circle
 {
@@ -255,6 +256,25 @@ namespace MyJetWallet.Circle
 
         Task<WebCallResult<PaymentInfo>> GetPaymentAsync(
             string id,
+            CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region Payments
+
+        Task<WebCallResult<BankAccountInfo>> CreateBankAccountSepaAsync(
+            string idempotencyKey,
+            string iban,
+            BillingDetails billingDetails,
+            BankAddress bankAddress,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<BankAccountInfo>> CreateBankAccountUsSwiftAsync(
+            string idempotencyKey,
+            string accountNumber,
+            string routingNumber,
+            BillingDetails billingDetails,
+            BankAddress bankAddress,
             CancellationToken cancellationToken = default);
 
         #endregion
