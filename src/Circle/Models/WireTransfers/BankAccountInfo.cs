@@ -11,7 +11,8 @@ namespace MyJetWallet.Circle.Models.WireTransfers
         public string Id { get; set; }
 
         [JsonProperty("status"), DataMember(Order = 2)]
-        public string Status { get; set; }
+        [JsonConverter(typeof(Newtonsoft.Json.Converters.StringEnumConverter))]
+        public BankAccountStatus Status { get; set; }
 
         [JsonProperty("description"), DataMember(Order = 3)]
         public string Description { get; set; }
