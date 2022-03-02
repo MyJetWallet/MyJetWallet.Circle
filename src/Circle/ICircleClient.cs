@@ -277,6 +277,10 @@ namespace MyJetWallet.Circle
             BankAddress bankAddress,
             CancellationToken cancellationToken = default);
 
+        Task<WebCallResult<BankWireTransferDetail>> ObtainBankWireTransferDetailsAsync(
+            string bankAccountId,
+            CancellationToken cancellationToken = default);
+
         #endregion
 
         #region onchain

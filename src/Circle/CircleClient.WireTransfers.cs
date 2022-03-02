@@ -54,6 +54,13 @@ namespace MyJetWallet.Circle
 
             return await PostAsync<BankAccountInfo>($"{EndpointUrl}/banks/wires", data, cancellationToken);
         }
+
+        public async Task<WebCallResult<BankWireTransferDetail>> ObtainBankWireTransferDetailsAsync(
+            string bankAccountId,
+            CancellationToken cancellationToken = default)
+        {
+            return await GetAsync<BankWireTransferDetail>($"{EndpointUrl}/banks/wires/{bankAccountId}/instructions", cancellationToken);
+        }
     }
 
     #endregion

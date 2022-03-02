@@ -54,6 +54,9 @@ namespace TestApp
         private static async Task TestBankAccounts()
         {
             //EXAMPLE FROM CIRCLE
+
+            var details = await _client.ObtainBankWireTransferDetailsAsync("230c9646-53d5-4df2-9fe9-dc7131cadcb9");
+
             var bank1 = await _client.CreateBankAccountUsSwiftAsync(
                 "6ae62bf2-bd71-49ce-a599-165ffcc33680",
                 "123456789",
