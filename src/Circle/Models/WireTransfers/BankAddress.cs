@@ -21,7 +21,7 @@ namespace MyJetWallet.Circle.Models.WireTransfers
         [JsonProperty("line2", NullValueHandling = NullValueHandling.Ignore), DataMember(Order = 5)]
         public string Line2 { get; set; }
 
-        [JsonProperty("distract", NullValueHandling = NullValueHandling.Ignore), DataMember(Order = 6)]
+        [JsonProperty("district", NullValueHandling = NullValueHandling.Ignore), DataMember(Order = 6)]
         public string District { get; set; }
     }
 }
