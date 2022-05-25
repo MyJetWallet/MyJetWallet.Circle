@@ -30,16 +30,16 @@ namespace MyJetWallet.Circle
         public WebCallResult<PaymentInfo> CreatePayment(string idempotencyKey, string keyId, string email,
             string phoneNumber, string sessionId,
             string ipAddress, string amount, string currency, string verification, string sourceId, string sourceType,
-            string description, string encryptedData, CancellationToken cancellationToken = default) =>
+            string description, string encryptedData, string verificationUrlSuccess, string verificationUrlFailure, CancellationToken cancellationToken = default) =>
             CreatePaymentAsync(idempotencyKey,
                 keyId, email, phoneNumber, sessionId, ipAddress, amount, currency, verification, sourceId, sourceType,
-                description, encryptedData, cancellationToken).Result;
+                description, encryptedData, verificationUrlSuccess, verificationUrlFailure, cancellationToken).Result;
 
         public async Task<WebCallResult<PaymentInfo>> CreatePaymentAsync(string idempotencyKey, string keyId,
             string email,
             string phoneNumber, string sessionId,
             string ipAddress, string amount, string currency, string verification, string sourceId, string sourceType,
-            string description, string encryptedData, CancellationToken cancellationToken = default)
+            string description, string encryptedData, string verificationUrlSuccess, string verificationUrlFailure, CancellationToken cancellationToken = default)
         {
             var data = new CreatePaymentRequest()
             {
@@ -65,7 +65,9 @@ namespace MyJetWallet.Circle
                     Type = sourceType
                 },
                 Description = description,
-                EncryptedData = encryptedData
+                EncryptedData = encryptedData,
+                VerificationFailureUrl = verificationUrlFailure,
+                VerificationSuccessUrl = verificationUrlSuccess,
             };
             return await PostAsync<PaymentInfo>($"{EndpointUrl}/payments", data, cancellationToken);
         }

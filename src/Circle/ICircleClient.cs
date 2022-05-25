@@ -226,6 +226,8 @@ namespace MyJetWallet.Circle
             string sourceType,
             string description,
             string encryptedData,
+            string verificationUrlSuccess,
+            string verificationUrlFailure,
             CancellationToken cancellationToken = default);
 
         Task<WebCallResult<PaymentInfo>> CreatePaymentAsync(
@@ -242,6 +244,8 @@ namespace MyJetWallet.Circle
             string sourceType,
             string description,
             string encryptedData,
+            string verificationUrlSuccess, 
+            string verificationUrlFailure,
             CancellationToken cancellationToken = default);
 
         /// <summary>

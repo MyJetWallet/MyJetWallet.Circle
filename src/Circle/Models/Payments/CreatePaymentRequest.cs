@@ -4,14 +4,21 @@ namespace MyJetWallet.Circle.Models.Payments
 {
     public class CreatePaymentRequest
     {
-        [JsonProperty("idempotencyKey")] public string IdempotencyKey { get; internal set; }
-        [JsonProperty("keyId")] public string KeyId { get; internal set; }
-        [JsonProperty("metadata")] public Metadata Metadata { get; internal set; }
-        [JsonProperty("amount")] public PaymentAmount Amount { get; internal set; }
-        [JsonProperty("autoCapture")] public bool AutoCapture { get; internal set; }
-        [JsonProperty("verification")] public string Verification { get; internal set; }
-        [JsonProperty("source")] public PaymentSource Source { get; internal set; }
-        [JsonProperty("description")] public string Description { get; internal set; }
-        [JsonProperty("encryptedData")] public string EncryptedData { get; internal set; }
+        [JsonProperty("idempotencyKey")] public string IdempotencyKey { get; set; }
+        [JsonProperty("keyId")] public string KeyId { get; set; }
+        [JsonProperty("metadata")] public Metadata Metadata { get; set; }
+        [JsonProperty("amount")] public PaymentAmount Amount { get; set; }
+        [JsonProperty("autoCapture")] public bool AutoCapture { get; set; }
+        [JsonProperty("verification")] public string Verification { get; set; }
+
+        [JsonProperty("verificationSuccessUrl", NullValueHandling = NullValueHandling.Ignore)]
+        public string VerificationSuccessUrl { get; set; }
+
+        [JsonProperty("verificationFailureUrl", NullValueHandling = NullValueHandling.Ignore)]
+        public string VerificationFailureUrl { get; set; }
+
+        [JsonProperty("source")] public PaymentSource Source { get; set; }
+        [JsonProperty("description")] public string Description { get; set; }
+        [JsonProperty("encryptedData")] public string EncryptedData { get; set; }
     }
 }
