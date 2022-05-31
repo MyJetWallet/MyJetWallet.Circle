@@ -15,7 +15,7 @@ namespace MyJetWallet.Circle
 {
     public partial class CircleClient : IDisposable, ICircleClient
     {
-        public const string MainPublicApi = "https://api-sandbox.circle.com/v1";
+        public const string MainPublicApi = "https://api.circle.com/v1";
         public const string TestPublicApi = "https://api-sandbox.circle.com/v1";
 
         #region Properties
