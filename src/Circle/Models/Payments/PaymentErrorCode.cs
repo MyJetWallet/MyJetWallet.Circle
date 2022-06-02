@@ -30,6 +30,13 @@
         BankTransactionError,
         InvalidAccountNumber,
         InvalidWireRtn,
-        InvalidAchRtn
+        InvalidAchRtn,
+        RefIdInvalid,
+        AccountNameMismatch,
+        AccountNumberMismatch,
+        AccountIneligible,
+        WalletAddressMismatch,
+        CustomerNameMismatch,
+        InstitutionNameMismatch,
     }
 }
