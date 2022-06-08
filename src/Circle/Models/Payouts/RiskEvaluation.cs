@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MyJetWallet.Circle.Converters;
+using Newtonsoft.Json;
 using System.Runtime.Serialization;
 
 namespace MyJetWallet.Circle.Models.Payouts
@@ -7,6 +8,7 @@ namespace MyJetWallet.Circle.Models.Payouts
     public class RiskEvaluation
     {
         [JsonProperty("decision"), DataMember(Order = 1)]
+        [JsonConverter(typeof(RiskEvaluationTypeConverter))]
         public RiskEvaluationType Decision { get; set; }
 
         [JsonProperty("reason"), DataMember(Order = 2)]

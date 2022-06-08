@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MyJetWallet.Circle.Converters;
+using Newtonsoft.Json;
 using System;
 using System.Runtime.Serialization;
 
@@ -26,19 +27,24 @@ namespace MyJetWallet.Circle.Models.Payouts
         public PayoutAmount Amount { get; set; }
 
         [JsonProperty("status"), DataMember(Order = 7)]
+        [JsonConverter(typeof(PayoutStatusConverter))]
         public PayoutStatus Status { get; set; }
 
         [JsonProperty("trackingRef"), DataMember(Order = 8)]
         public string TrackingRef { get; set; }
 
         [JsonProperty("error"), DataMember(Order = 9)]
-        public PayoutErrorCode Error { get; set; }
+        [JsonConverter(typeof(PayoutErrorCodeConverter))]
+        public PayoutErrorCode? Error { get; set; }
 
         [JsonProperty("riskEvaluation"), DataMember(Order = 10)]
         public RiskEvaluation RiskEvaluation { get; set; }
 
         [JsonProperty("adjustments"), DataMember(Order = 11)]
         public PayoutAdjustments Adjustments { get; set; }
+
+        [JsonProperty("fees"), DataMember(Order = 12)]
+        public PayoutAmount Fees { get; set; }
 
     }
 }

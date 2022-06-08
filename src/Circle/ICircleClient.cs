@@ -5,6 +5,7 @@ using MyJetWallet.Circle.Models;
 using MyJetWallet.Circle.Models.Cards;
 using MyJetWallet.Circle.Models.Onchain;
 using MyJetWallet.Circle.Models.Payments;
+using MyJetWallet.Circle.Models.Payouts;
 using MyJetWallet.Circle.Models.Subscriptions;
 using MyJetWallet.Circle.Models.WireTransfers;
 
@@ -283,6 +284,19 @@ namespace MyJetWallet.Circle
 
         Task<WebCallResult<BankWireTransferDetail>> ObtainBankWireTransferDetailsAsync(
             string bankAccountId,
+            CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region Payouts 
+
+        Task<WebCallResult<PayoutInfo>> CreatePayoutAsync(
+            string idempotencyKey,
+            string amount,
+            string currency,
+            string destinationId,
+            string destinationType,
+            string email,
             CancellationToken cancellationToken = default);
 
         #endregion

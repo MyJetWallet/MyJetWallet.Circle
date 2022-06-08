@@ -20,11 +20,13 @@ namespace TestApp
                 return;
             }
 
-            _client = new CircleClient(_accessToken);
+            _client = new CircleClient(_accessToken, CircleNetwork.Test);
+
+            await TestPayouts();
 
             // await TestPublicKey();
             //await TestCards();
-            await TestBankAccounts();
+            //await TestBankAccounts();
         }
 
         private static async Task TestPublicKey()
@@ -76,6 +78,20 @@ namespace TestApp
                 });
 
             Console.WriteLine(JsonSerializer.Serialize(bank1, new JsonSerializerOptions()
+            {
+                WriteIndented = true
+            }));
+        }
+
+        private static async Task TestPayouts()
+        {
+            //EXAMPLE FROM CIRCLE
+
+            var idempotenctId = Guid.NewGuid().ToString();//
+            var payout = await _client.CreatePayoutAsync(idempotenctId, "100", "USD", "230c9646-53d5-4df2-9fe9-dc7131cadcb9", "wire", 
+                "email.b@email.net");
+
+            Console.WriteLine(JsonSerializer.Serialize(payout, new JsonSerializerOptions()
             {
                 WriteIndented = true
             }));
