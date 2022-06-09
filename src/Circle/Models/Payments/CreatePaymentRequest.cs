@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using MyJetWallet.Circle.Models.Payouts;
+using Newtonsoft.Json;
 
 namespace MyJetWallet.Circle.Models.Payments
 {
@@ -7,7 +8,7 @@ namespace MyJetWallet.Circle.Models.Payments
         [JsonProperty("idempotencyKey")] public string IdempotencyKey { get; set; }
         [JsonProperty("keyId")] public string KeyId { get; set; }
         [JsonProperty("metadata")] public Metadata Metadata { get; set; }
-        [JsonProperty("amount")] public PaymentAmount Amount { get; set; }
+        [JsonProperty("amount")] public CircleAmount Amount { get; set; }
         [JsonProperty("autoCapture")] public bool AutoCapture { get; set; }
         [JsonProperty("verification")] public string Verification { get; set; }
 

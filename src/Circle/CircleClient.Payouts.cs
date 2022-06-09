@@ -28,7 +28,7 @@ namespace MyJetWallet.Circle
             var data = new CreatePayoutRequest()
             {
                 IdempotencyKey = idempotencyKey,
-                Amount = new PayoutAmount
+                Amount = new CircleAmount
                 {
                     Amount = amount,
                     Currency = currency

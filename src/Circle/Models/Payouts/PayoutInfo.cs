@@ -24,7 +24,7 @@ namespace MyJetWallet.Circle.Models.Payouts
         public PayoutDestination Destination { get; set; }
 
         [JsonProperty("amount"), DataMember(Order = 6)]
-        public PayoutAmount Amount { get; set; }
+        public CircleAmount Amount { get; set; }
 
         [JsonProperty("status"), DataMember(Order = 7)]
         [JsonConverter(typeof(PayoutStatusConverter))]
@@ -44,7 +44,7 @@ namespace MyJetWallet.Circle.Models.Payouts
         public PayoutAdjustments Adjustments { get; set; }
 
         [JsonProperty("fees"), DataMember(Order = 12)]
-        public PayoutAmount Fees { get; set; }
+        public CircleAmount Fees { get; set; }
 
     }
 }

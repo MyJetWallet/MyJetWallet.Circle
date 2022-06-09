@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using MyJetWallet.Circle.Models;
 using MyJetWallet.Circle.Models.Payments;
+using MyJetWallet.Circle.Models.Payouts;
 
 namespace MyJetWallet.Circle
 {
@@ -52,7 +53,7 @@ namespace MyJetWallet.Circle
                     SessionId = sessionId,
                     IpAddress = ipAddress
                 },
-                Amount = new PaymentAmount
+                Amount = new CircleAmount
                 {
                     Amount = amount,
                     Currency = currency

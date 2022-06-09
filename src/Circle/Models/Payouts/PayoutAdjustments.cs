@@ -7,9 +7,9 @@ namespace MyJetWallet.Circle.Models.Payouts
     public class PayoutAdjustments
     {
         [JsonProperty("fxCredit"), DataMember(Order = 1)]
-        public PayoutAmount FxCredit { get; set; }
+        public CircleAmount FxCredit { get; set; }
 
         [JsonProperty("fxDebit"), DataMember(Order = 2)]
-        public PayoutAmount FxDebit { get; set; }
+        public CircleAmount FxDebit { get; set; }
     }
 }

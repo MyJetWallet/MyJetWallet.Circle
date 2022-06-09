@@ -1,5 +1,6 @@
 ﻿using System.Runtime.Serialization;
 using MyJetWallet.Circle.Converters;
+using MyJetWallet.Circle.Models.Payouts;
 using Newtonsoft.Json;
 
 namespace MyJetWallet.Circle.Models.Payments
@@ -20,7 +21,7 @@ namespace MyJetWallet.Circle.Models.Payments
         public string MerchantWalletId { get; set; }
 
         [JsonProperty("amount"), DataMember(Order = 5)]
-        public PaymentAmount Amount { get; set; }
+        public CircleAmount Amount { get; set; }
 
         [JsonProperty("source"), DataMember(Order = 6)]
         public PaymentSource Source { get; set; }
@@ -35,13 +36,13 @@ namespace MyJetWallet.Circle.Models.Payments
         public bool Captured { get; set; }
 
         [JsonProperty("captureAmount"), DataMember(Order = 10)]
-        public PaymentAmount CaptureAmount { get; set; }
+        public CircleAmount CaptureAmount { get; set; }
 
         [JsonProperty("captureDate"), DataMember(Order = 11)]
         public string CaptureDate { get; set; }
 
         [JsonProperty("fees"), DataMember(Order = 12)]
-        public PaymentAmount Fees { get; set; }
+        public CircleAmount Fees { get; set; }
 
         [JsonProperty("trackingRef"), DataMember(Order = 13)]
         public string TrackingRef { get; set; }

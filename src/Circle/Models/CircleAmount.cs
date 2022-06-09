@@ -1,10 +1,10 @@
 ﻿using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace MyJetWallet.Circle.Models.Payments
+namespace MyJetWallet.Circle.Models.Payouts
 {
     [DataContract]
-    public class PaymentAmount
+    public class CircleAmount
     {
         [JsonProperty("amount"), DataMember(Order = 1)]
         public string Amount { get; set; }

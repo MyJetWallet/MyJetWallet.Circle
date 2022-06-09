@@ -30,4 +30,5 @@ namespace MyJetWallet.Circle.Converters
             new KeyValuePair<PayoutErrorCode, string>(PayoutErrorCode.VendorInactive, "vendor_inactive"),
         };
     }
+    
 }
