@@ -18,6 +18,9 @@ namespace MyJetWallet.Circle
         public const string MainPublicApi = "https://api.circle.com/v1";
         public const string TestPublicApi = "https://api-sandbox.circle.com/v1";
 
+        public static bool PrintPostApiCalls { get; set; } = false;
+        public static bool PrintPutApiCalls { get; set; } = false;
+
         #region Properties
 
         public string EndpointUrl { get; private set; }
@@ -135,6 +138,11 @@ namespace MyJetWallet.Circle
                 cancellationToken);
             var content = await response.Content.ReadAsStringAsync(cancellationToken);
 
+            if (PrintPostApiCalls)
+            {
+                Console.WriteLine($"POST: {url}\nBody: {data}\nResp: {content}");
+            }
+
             // Return
             return this.EvaluateResponse<T>(response, content);
         }
@@ -148,6 +156,11 @@ namespace MyJetWallet.Circle
                 cancellationToken);
             var content = await response.Content.ReadAsStringAsync(cancellationToken);
 
+            if (PrintPutApiCalls)
+            {
+                Console.WriteLine($"PUT: {url}\nBody: {data}\nResp: {content}");
+            }
+            
             // Return
             return this.EvaluateResponse<T>(response, content);
         }
