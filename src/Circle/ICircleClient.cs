@@ -7,6 +7,8 @@ using MyJetWallet.Circle.Models.Onchain;
 using MyJetWallet.Circle.Models.Payments;
 using MyJetWallet.Circle.Models.Payouts;
 using MyJetWallet.Circle.Models.Subscriptions;
+using MyJetWallet.Circle.Models.Transfers;
+using MyJetWallet.Circle.Models.Wallets;
 using MyJetWallet.Circle.Models.WireTransfers;
 
 namespace MyJetWallet.Circle
@@ -297,6 +299,31 @@ namespace MyJetWallet.Circle
             string destinationId,
             string destinationType,
             string email,
+            CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region Wallets
+
+        Task<WebCallResult<WalletInfo>> CreateWalletAsync(string idempotencyKey, string description,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<WalletInfo>> GetWalletAsync(string id,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<WalletInfo[]>> GetWalletsAsync(string pageAfter, int pageSize,
+            CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region Transfers
+
+        Task<WebCallResult<TransferInfo>> CreateTransferV2Async(string idempotencyKey, string amount, string currency, string sourceId, string address, string addressTag, string destinationChain, CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<TransferInfo>> GetTransferV2Async(string id,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<TransferInfo[]>> GetTransfersV2Async(string pageAfter, int pageSize,
             CancellationToken cancellationToken = default);
 
         #endregion
