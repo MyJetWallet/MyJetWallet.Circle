@@ -23,7 +23,7 @@ namespace MyJetWallet.Circle.Models.ChargeBacks
         [DataMember(Order = 5), JsonProperty("settlementId")]
         public string SettlementId { get; set; }
 
-        [DataMember(Order = 5), JsonProperty("createDate")]
+        [DataMember(Order = 6), JsonProperty("createDate")]
         public DateTime CreateDate { get; set; }
 
     }
