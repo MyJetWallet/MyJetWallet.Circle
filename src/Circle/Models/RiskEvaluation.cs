@@ -1,5 +1,6 @@
-﻿using System.Runtime.Serialization;
+﻿using MyJetWallet.Circle.Converters;
 using Newtonsoft.Json;
+using System.Runtime.Serialization;
 
 namespace MyJetWallet.Circle.Models
 {
@@ -7,9 +8,10 @@ namespace MyJetWallet.Circle.Models
     public class RiskEvaluation
     {
         [JsonProperty("decision"), DataMember(Order = 1)]
-        public string Decision { get; internal set; }
+        [JsonConverter(typeof(RiskEvaluationTypeConverter))]
+        public RiskEvaluationType Decision { get; set; }
 
         [JsonProperty("reason"), DataMember(Order = 2)]
-        public string Reason { get; internal set; }
+        public string Reason { get; set; }
     }
 }

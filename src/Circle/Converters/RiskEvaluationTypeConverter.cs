@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using MyJetWallet.Circle.Base;
-using MyJetWallet.Circle.Models.Payouts;
+using MyJetWallet.Circle.Models;
 
 namespace MyJetWallet.Circle.Converters
 {

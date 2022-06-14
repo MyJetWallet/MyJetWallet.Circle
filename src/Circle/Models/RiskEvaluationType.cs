@@ -1,4 +1,4 @@
-﻿namespace MyJetWallet.Circle.Models.Payouts
+﻿namespace MyJetWallet.Circle.Models
 {
     public enum RiskEvaluationType
     {

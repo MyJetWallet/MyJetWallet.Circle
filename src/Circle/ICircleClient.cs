@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 using MyJetWallet.Circle.Models;
+using MyJetWallet.Circle.Models.BusinessAccounts;
 using MyJetWallet.Circle.Models.Cards;
 using MyJetWallet.Circle.Models.Onchain;
 using MyJetWallet.Circle.Models.Payments;
@@ -318,13 +319,19 @@ namespace MyJetWallet.Circle
 
         #region Transfers
 
-        Task<WebCallResult<TransferInfo>> CreateTransferV2Async(string idempotencyKey, string amount, string currency, string sourceId, string address, string addressTag, string destinationChain, CancellationToken cancellationToken = default);
+        Task<WebCallResult<Models.Transfers.TransferInfo>> CreateTransferV2Async(string idempotencyKey, string amount, string currency, string sourceId, string address, string addressTag, string destinationChain, CancellationToken cancellationToken = default);
 
-        Task<WebCallResult<TransferInfo>> GetTransferV2Async(string id,
+        Task<WebCallResult<Models.Transfers.TransferInfo>> GetTransferV2Async(string id,
             CancellationToken cancellationToken = default);
 
-        Task<WebCallResult<TransferInfo[]>> GetTransfersV2Async(string pageAfter, int pageSize,
+        Task<WebCallResult<Models.Transfers.TransferInfo[]>> GetTransfersV2Async(string pageAfter, int pageSize,
             CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region BusinessAccount
+
+
 
         #endregion
 
