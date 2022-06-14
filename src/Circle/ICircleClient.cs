@@ -332,16 +332,30 @@ namespace MyJetWallet.Circle
         #region BusinessAccount
 
 
+        Task<WebCallResult<ConfigurationInfo>> GetConfigurationInfoAsync(CancellationToken cancellationToken = default);
 
-        #endregion
+        Task<WebCallResult<BalanceInfo>> GetBalanceAsync(CancellationToken cancellationToken = default);
 
-        #region onchain
+        Task<WebCallResult<Models.BusinessAccounts.TransferInfo>> CreateBusinessTransferAsync(string idempotencyKey, string destinationAddressId, string amount, string currency, CancellationToken cancellationToken = default);
 
-        /// <summary>
-        /// Retrieves general configuration information.
-        /// </summary>
-        /// <returns></returns>
-        WebCallResult<Configuration> GetConfiguration(
+        Task<WebCallResult<Models.BusinessAccounts.TransferInfo[]>> GetBusinessTransferAsync(string pageAfter, int pageSize, CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<DepositAddressInfo>> CreateBusinessDepositAddressesAsync(string idempotencyKey, string currency, string chain, CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<DepositAddressInfo[]>> GetBusinessDepositAddressesAsync(CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<DepositInfo[]>> GetBusinessDepositsAsync(string pageAfter, int pageSize,
+            CancellationToken cancellationToken = default);
+
+    #endregion
+
+    #region onchain
+
+    /// <summary>
+    /// Retrieves general configuration information.
+    /// </summary>
+    /// <returns></returns>
+    WebCallResult<Configuration> GetConfiguration(
             CancellationToken cancellationToken = default);
 
         Task<WebCallResult<Configuration>> GetConfigurationAsync(
