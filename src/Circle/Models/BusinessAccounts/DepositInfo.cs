@@ -27,10 +27,10 @@ namespace MyJetWallet.Circle.Models.BusinessAccounts
         [JsonConverter(typeof(DepositStatusConverter))]
         public DepositStatus Status { get; set; }
 
-        [DataMember(Order = 6), JsonProperty("createDate")]
+        [DataMember(Order = 7), JsonProperty("createDate")]
         public DateTime CreateDate { get; set; }
 
-        [DataMember(Order = 7), JsonProperty("updateDate")]
+        [DataMember(Order = 8), JsonProperty("updateDate")]
         public DateTime UpdateDate { get; set; }
 
     }

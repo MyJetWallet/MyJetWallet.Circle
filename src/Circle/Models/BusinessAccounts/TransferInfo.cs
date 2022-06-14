@@ -39,14 +39,4 @@ namespace MyJetWallet.Circle.Models.BusinessAccounts
         public Transfers.TransferErrorCode? ErrorCode { get; set; }
 
     }
-
-    [DataContract]
-    public class DepositDestination
-    {
-        [JsonProperty("id"), DataMember(Order = 1)]
-        public string Id { get; set; }
-
-        [JsonProperty("type"), DataMember(Order = 2)]
-        public string Type { get; set; }
-    }
 }
