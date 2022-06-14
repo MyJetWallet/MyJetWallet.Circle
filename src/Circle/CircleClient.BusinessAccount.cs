@@ -10,7 +10,7 @@ namespace MyJetWallet.Circle
     {
         #region BusinessAccount
 
-       
+
         public async Task<WebCallResult<ConfigurationInfo>> GetConfigurationInfoAsync(CancellationToken cancellationToken = default)
         {
             return await GetAsync<ConfigurationInfo>($"{EndpointUrl}/configuration", cancellationToken);
@@ -54,12 +54,12 @@ namespace MyJetWallet.Circle
                 Currency = currency,
                 IdempotencyKey = idempotencyKey
             };
-            return await PostAsync<DepositAddressInfo>($"{EndpointUrl}/businessAccount/deposit", request, cancellationToken);
+            return await PostAsync<DepositAddressInfo>($"{EndpointUrl}/businessAccount/wallets/addresses/deposit", request, cancellationToken);
         }
 
         public async Task<WebCallResult<DepositAddressInfo[]>> GetBusinessDepositAddressesAsync(CancellationToken cancellationToken = default)
         {
-            return await GetAsync<DepositAddressInfo[]>($"{EndpointUrl}/businessAccount/deposit", cancellationToken);
+            return await GetAsync<DepositAddressInfo[]>($"{EndpointUrl}/businessAccount/wallets/addresses/deposit", cancellationToken);
         }
 
         public async Task<WebCallResult<DepositInfo[]>> GetBusinessDepositsAsync(string pageAfter, int pageSize,
@@ -67,6 +67,29 @@ namespace MyJetWallet.Circle
         {
             var query = string.IsNullOrEmpty(pageAfter) ? "" : $"pageAfter={pageAfter}";
             return await GetAsync<DepositInfo[]>($"{EndpointUrl}/businessAccount/deposits?{query}&pageSize={pageSize}", cancellationToken);
+        }
+
+        public async Task<WebCallResult<RecipientAddressInfo>> CreateBusinessRecipientAddressAsync(
+            string idempotencyKey, string currency, string chain
+, string address, string addressTag, string description, CancellationToken cancellationToken = default)
+        {
+            var request = new CreateBusinessRecipientAddressRequest
+            {
+                Chain = chain,
+                Currency = currency,
+                IdempotencyKey = idempotencyKey,
+                Address = address,
+                AddressTag = addressTag,
+                Description = description,
+            };
+            return await PostAsync<RecipientAddressInfo>($"{EndpointUrl}/businessAccount/wallets/addresses/recipient", request, cancellationToken);
+        }
+
+        public async Task<WebCallResult<RecipientAddressInfo[]>> GetBusinessRecipientAddressesAsync(string pageAfter, int pageSize,
+            CancellationToken cancellationToken = default)
+        {
+            var query = string.IsNullOrEmpty(pageAfter) ? "" : $"pageAfter={pageAfter}";
+            return await GetAsync<RecipientAddressInfo[]>($"{EndpointUrl}/businessAccount/wallets/addresses/recipient?{query}&pageSize={pageSize}", cancellationToken);
         }
     }
 

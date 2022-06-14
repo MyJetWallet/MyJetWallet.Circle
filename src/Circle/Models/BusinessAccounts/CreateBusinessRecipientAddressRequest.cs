@@ -2,12 +2,19 @@
 
 namespace MyJetWallet.Circle.Models.Payments
 {
-    public class CreateDepositAddressRequest
+    public class CreateBusinessRecipientAddressRequest
     {
         [JsonProperty("idempotencyKey")] public string IdempotencyKey { get; set; }
+
         [JsonProperty("currency")] public string Currency { get; set; }
 
         [JsonProperty("chain")] public string Chain { get; set; }
+
+        [JsonProperty("address")] public string Address { get; set; }
+
+        [JsonProperty("addressTag")] public string AddressTag { get; set; }
+
+        [JsonProperty("description")] public string Description { get; set; }
     }
     
 }

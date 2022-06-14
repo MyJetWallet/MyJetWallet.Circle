@@ -248,7 +248,7 @@ namespace MyJetWallet.Circle
             string sourceType,
             string description,
             string encryptedData,
-            string verificationUrlSuccess, 
+            string verificationUrlSuccess,
             string verificationUrlFailure,
             CancellationToken cancellationToken = default);
 
@@ -347,15 +347,22 @@ namespace MyJetWallet.Circle
         Task<WebCallResult<DepositInfo[]>> GetBusinessDepositsAsync(string pageAfter, int pageSize,
             CancellationToken cancellationToken = default);
 
-    #endregion
+        Task<WebCallResult<RecipientAddressInfo>> CreateBusinessRecipientAddressAsync(
+            string idempotencyKey, string currency, string chain, string address, string addressTag, string description, 
+            CancellationToken cancellationToken = default);
 
-    #region onchain
+        Task<WebCallResult<RecipientAddressInfo[]>> GetBusinessRecipientAddressesAsync(string pageAfter, int pageSize,
+            CancellationToken cancellationToken = default);
 
-    /// <summary>
-    /// Retrieves general configuration information.
-    /// </summary>
-    /// <returns></returns>
-    WebCallResult<Configuration> GetConfiguration(
+        #endregion
+
+        #region onchain
+
+        /// <summary>
+        /// Retrieves general configuration information.
+        /// </summary>
+        /// <returns></returns>
+        WebCallResult<Configuration> GetConfiguration(
             CancellationToken cancellationToken = default);
 
         Task<WebCallResult<Configuration>> GetConfigurationAsync(
