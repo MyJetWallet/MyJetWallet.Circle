@@ -31,12 +31,12 @@ namespace MyJetWallet.Circle.Models.BusinessAccounts
         [JsonConverter(typeof(TransferStatusConverter))]
         public Transfers.TransferStatus Status { get; set; }
 
-        [DataMember(Order = 6), JsonProperty("createDate")]
+        [DataMember(Order = 7), JsonProperty("createDate")]
         public DateTime CreateDate { get; set; }
 
-        [DataMember(Order = 7), JsonProperty("errorCode")]
+        [DataMember(Order = 8), JsonProperty("errorCode")]
         [JsonConverter(typeof(TransferErrorCodeConverter))]
-        public Transfers.TransferErrorCode? errorCode { get; set; }
+        public Transfers.TransferErrorCode? ErrorCode { get; set; }
 
     }
 
