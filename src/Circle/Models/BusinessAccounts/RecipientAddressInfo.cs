@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 
 namespace MyJetWallet.Circle.Models.BusinessAccounts
 {
+    [DataContract]
     public class RecipientAddressInfo
     {
         [DataMember(Order = 1), JsonProperty("address")]
