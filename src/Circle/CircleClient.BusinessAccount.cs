@@ -37,7 +37,7 @@ namespace MyJetWallet.Circle
                     Type = "verified_blockchain",
                 }
             };
-            return await PostAsync<TransferInfo>($"{EndpointUrl}/businessAccount/transfers", cancellationToken);
+            return await PostAsync<TransferInfo>($"{EndpointUrl}/businessAccount/transfers", request, cancellationToken);
         }
 
         public async Task<WebCallResult<TransferInfo[]>> GetBusinessTransferAsync(string pageAfter, int pageSize, CancellationToken cancellationToken = default)
