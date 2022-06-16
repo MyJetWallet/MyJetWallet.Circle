@@ -16,7 +16,7 @@ namespace MyJetWallet.Circle
         /// <param name="idempotencyKey">Unique idempotency key. This key is utilized to ensure exactly-once execution of mutating requests.</param>
         /// <param name="cancellationToken"></param>
         /// <returns></returns>
-        
+
         public async Task<WebCallResult<BankAccountInfo>> CreateBankAccountUsSwiftAsync(
             string idempotencyKey,
             string accountNumber,
@@ -61,7 +61,7 @@ namespace MyJetWallet.Circle
         {
             return await GetAsync<BankWireTransferDetail>($"{EndpointUrl}/banks/wires/{bankAccountId}/instructions", cancellationToken);
         }
-    }
 
-    #endregion
+        #endregion
+    }
 }

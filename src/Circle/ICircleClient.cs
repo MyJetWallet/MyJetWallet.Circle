@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using MyJetWallet.Circle.Models;
 using MyJetWallet.Circle.Models.BusinessAccounts;
 using MyJetWallet.Circle.Models.Cards;
+using MyJetWallet.Circle.Models.ChargeBacks;
 using MyJetWallet.Circle.Models.Onchain;
 using MyJetWallet.Circle.Models.Payments;
 using MyJetWallet.Circle.Models.Payouts;
@@ -352,6 +353,13 @@ namespace MyJetWallet.Circle
             CancellationToken cancellationToken = default);
 
         Task<WebCallResult<RecipientAddressInfo[]>> GetBusinessRecipientAddressesAsync(string pageAfter, int pageSize,
+            CancellationToken cancellationToken = default);
+
+        #endregion
+
+        #region Chargebacks
+
+        Task<WebCallResult<Chargeback[]>> GetChargebacksAsync(string pageAfter, int pageSize,
             CancellationToken cancellationToken = default);
 
         #endregion
