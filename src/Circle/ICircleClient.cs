@@ -303,6 +303,12 @@ namespace MyJetWallet.Circle
             string email,
             CancellationToken cancellationToken = default);
 
+        Task<WebCallResult<PayoutInfo>> GetPayoutAsync(string id,
+            CancellationToken cancellationToken = default);
+
+        Task<WebCallResult<PayoutInfo[]>> GetPayoutsAsync(string pageAfter, int pageSize,
+            CancellationToken cancellationToken = default);
+
         #endregion
 
         #region Wallets

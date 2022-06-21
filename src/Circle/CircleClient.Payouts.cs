@@ -60,6 +60,13 @@ namespace MyJetWallet.Circle
         {
             return await GetAsync<PayoutInfo>($"{EndpointUrl}/payouts/{id}", cancellationToken);
         }
+
+        public async Task<WebCallResult<PayoutInfo[]>> GetPayoutsAsync(string pageAfter, int pageSize,
+            CancellationToken cancellationToken = default)
+        {
+            var query = string.IsNullOrEmpty(pageAfter) ? "" : $"pageAfter={pageAfter}";
+            return await GetAsync<PayoutInfo[]>($"{EndpointUrl}/payouts?{query}&pageSize={pageSize}", cancellationToken);
+        }
     }
 
     #endregion
