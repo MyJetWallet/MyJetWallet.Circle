@@ -1,4 +1,5 @@
 ﻿#nullable enable
+using System;
 using System.Runtime.Serialization;
 using MyJetWallet.Circle.Converters;
 using Newtonsoft.Json;
@@ -54,9 +55,9 @@ namespace MyJetWallet.Circle.Models.Cards
         public Metadata Metadata { get; internal set; }
 
         [JsonProperty("createDate"), DataMember(Order = 16)]
-        public string CreateDate { get; internal set; }
+        public DateTime CreateDate { get; internal set; }
 
         [JsonProperty("updateDate"), DataMember(Order = 17)]
-        public string UpdateDate { get; internal set; }
+        public DateTime UpdateDate { get; internal set; }
     }
 }
