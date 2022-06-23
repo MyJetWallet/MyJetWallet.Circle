@@ -52,7 +52,18 @@ namespace MyJetWallet.Circle.Converters
             new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.BankTransactionError, "bank_transaction_error"),
             new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.InvalidAccountNumber, "invalid_account_number"),
             new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.InvalidWireRtn, "invalid_wire_rtn"),
-            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.InvalidAchRtn, "invalid_ach_rtn")
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.InvalidAchRtn, "invalid_ach_rtn"),
+
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.VerificationFailed, "verification_failed"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.VerificationFraudDetected, "verification_fraud_detected"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.VerificationDenied, "verification_denied"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.VerificationNotSupportedByIssuer, "verification_not_supported_by_issuer"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.VerificationStoppedByIssuer, "verification_stopped_by_issuer"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureNotSupported, "three_d_secure_not_supported"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureRequired, "three_d_secure_required"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureFailure, "three_d_secure_failure"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureActionExpired, "three_d_secure_action_expired"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureInvalidRequest, "three_d_secure_invalid_request"),
         };
     }
 }

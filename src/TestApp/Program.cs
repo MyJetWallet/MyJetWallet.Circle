@@ -22,6 +22,8 @@ namespace TestApp
 
             _client = new CircleClient(_accessToken, CircleNetwork.Test);
 
+            
+            var payment = await _client.GetPaymentAsync("be42103b-b420-4d2e-96a4-805cdc94b7d7");
             var transfer = await _client.CreateBusinessTransferAsync(Guid.NewGuid().ToString(), "dd86f811-62e5-5aa8-bd02-b3b6958d5d7e", "10", "USD");
 
             //await TestPayouts();

@@ -38,5 +38,17 @@
         WalletAddressMismatch,
         CustomerNameMismatch,
         InstitutionNameMismatch,
+
+        VerificationFailed,
+        VerificationFraudDetected,
+        VerificationDenied,
+        VerificationNotSupportedByIssuer,
+        VerificationStoppedByIssuer,
+
+        ThreeDSecureNotSupported,
+        ThreeDSecureRequired,
+        ThreeDSecureFailure,
+        ThreeDSecureActionExpired,
+        ThreeDSecureInvalidRequest,
     }
 }
