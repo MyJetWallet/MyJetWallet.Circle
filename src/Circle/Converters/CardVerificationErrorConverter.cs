@@ -20,8 +20,8 @@ namespace MyJetWallet.Circle.Converters
                 "verification_failed"),
             new KeyValuePair<CardVerificationError, string>(CardVerificationError.VerificationFraudDetected,
                 "verification_fraud_detected"),
-            new KeyValuePair<CardVerificationError, string>(CardVerificationError.VerificationDenied,
-                "verification_denied"),
+            new KeyValuePair<CardVerificationError, string>(CardVerificationError.RiskDenied,
+                "risk_denied"),
             new KeyValuePair<CardVerificationError, string>(CardVerificationError.VerificationNotSupportedByIssuer,
                 "verification_not_supported_by_issuer"),
             new KeyValuePair<CardVerificationError, string>(CardVerificationError.VerificationStoppedByIssuer,
@@ -43,6 +43,11 @@ namespace MyJetWallet.Circle.Converters
                 "card_account_ineligible"),
             new KeyValuePair<CardVerificationError, string>(CardVerificationError.CardNetworkUnsupported,
                 "card_network_unsupported"),
+            new KeyValuePair<CardVerificationError, string>(CardVerificationError.ThreeDSecureNotSupported, "three_d_secure_not_supported"),
+            new KeyValuePair<CardVerificationError, string>(CardVerificationError.ThreeDSecureRequired, "three_d_secure_required"),
+            new KeyValuePair<CardVerificationError, string>(CardVerificationError.ThreeDSecureFailure, "three_d_secure_failure"),
+            new KeyValuePair<CardVerificationError, string>(CardVerificationError.ThreeDSecureActionExpired, "three_d_secure_action_expired"),
+            new KeyValuePair<CardVerificationError, string>(CardVerificationError.ThreeDSecureInvalidRequest, "three_d_secure_invalid_request"),
         };
     }
 }

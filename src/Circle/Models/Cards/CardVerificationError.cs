@@ -7,7 +7,7 @@ namespace MyJetWallet.Circle.Models.Cards
     {
         VerificationFailed,
         VerificationFraudDetected,
-        VerificationDenied,
+        RiskDenied,
         VerificationNotSupportedByIssuer,
         VerificationStoppedByIssuer,
         CardFailed,
@@ -21,6 +21,11 @@ namespace MyJetWallet.Circle.Models.Cards
         CardCvvRequired,
         CreditCardNotAllowed,
         CardAccountIneligible,
-        CardNetworkUnsupported
+        CardNetworkUnsupported,
+        ThreeDSecureNotSupported,
+        ThreeDSecureRequired,
+        ThreeDSecureFailure,
+        ThreeDSecureActionExpired,
+        ThreeDSecureInvalidRequest,
     }
 }
