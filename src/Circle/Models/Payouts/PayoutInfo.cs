@@ -46,5 +46,8 @@ namespace MyJetWallet.Circle.Models.Payouts
         [JsonProperty("fees"), DataMember(Order = 12)]
         public CircleAmount Fees { get; set; }
 
+        [JsonProperty("externalRef"), DataMember(Order = 13)]
+        public string ExternalRef { get; set; }
+
     }
 }
