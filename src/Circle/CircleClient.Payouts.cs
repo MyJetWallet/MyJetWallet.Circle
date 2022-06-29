@@ -20,6 +20,7 @@ namespace MyJetWallet.Circle
             string idempotencyKey, 
             string amount,
             string currency,
+            string sourceId,
             string destinationId, 
             string destinationType,
             string beneficiaryEmail,
@@ -32,6 +33,11 @@ namespace MyJetWallet.Circle
                 {
                     Amount = amount,
                     Currency = currency
+                },
+                Source = new PayoutSource
+                {
+                    Id = sourceId,
+                    Type = "wallet",
                 },
                 Destination = new PayoutDestination
                 {
