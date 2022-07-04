@@ -50,5 +50,6 @@
         ThreeDSecureFailure,
         ThreeDSecureActionExpired,
         ThreeDSecureInvalidRequest,
+        CardRestricted
     }
 }

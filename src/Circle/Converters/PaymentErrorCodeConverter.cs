@@ -69,6 +69,8 @@ namespace MyJetWallet.Circle.Converters
             new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureFailure, "three_d_secure_failure"),
             new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureActionExpired, "three_d_secure_action_expired"),
             new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.ThreeDSecureInvalidRequest, "three_d_secure_invalid_request"),
+            new KeyValuePair<PaymentErrorCode, string>(PaymentErrorCode.CardRestricted, "card_restricted"),
+
         };
     }
 }
