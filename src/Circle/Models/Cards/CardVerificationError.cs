@@ -27,6 +27,5 @@ namespace MyJetWallet.Circle.Models.Cards
         ThreeDSecureFailure,
         ThreeDSecureActionExpired,
         ThreeDSecureInvalidRequest,
-        CardRestricted
     }
 }
