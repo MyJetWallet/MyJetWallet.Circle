@@ -15,6 +15,7 @@ namespace MyJetWallet.Circle.Models.Transfers
         public string Name { get; set; }
 
         [JsonProperty("addresses"), DataMember(Order = 3)]
-        public string Addresses { get; set; }
+        public Address[] Addresses { get; set; } //https://developers.circle.com/docs/travel-rule-on-chain
+
     }
 }
