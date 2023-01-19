@@ -18,4 +18,7 @@ namespace MyJetWallet.Circle.Models.Transfers
         public Address[] Addresses { get; set; } //https://developers.circle.com/docs/travel-rule-on-chain
 
     }
+    
+    
+    
 }

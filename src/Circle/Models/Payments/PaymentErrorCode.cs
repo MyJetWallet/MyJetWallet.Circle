@@ -21,10 +21,10 @@
         CardLimitViolated,
         CardNotHonored,
         CardCvvRequired,
-        CreditCardNotAllowed,
+        //CreditCardNotAllowed,
         CardAccountIneligible,
-        CardNetworkUnsupported,
-        ChannelInvalid,
+        //CardNetworkUnsupported,
+        //ChannelInvalid,
         UnauthorizedTransaction,
         BankAccountIneligible,
         BankTransactionError,
@@ -41,7 +41,7 @@
 
         VerificationFailed,
         VerificationFraudDetected,
-        VerificationDenied,
+        //VerificationDenied,
         VerificationNotSupportedByIssuer,
         VerificationStoppedByIssuer,
 
