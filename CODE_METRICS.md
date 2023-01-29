@@ -27,8 +27,8 @@ The *MyJetWallet.Circle.csproj* project file contains:
 
 - 14 namespaces.
 - 92 named types.
-- 3,327 total lines of source code.
-- Approximately 1,410 lines of executable code.
+- 3,333 total lines of source code.
+- Approximately 1,413 lines of executable code.
 - The highest cyclomatic complexity is 6 :heavy_check_mark:.
 
 <details>
@@ -750,8 +750,8 @@ The `MyJetWallet.Circle.Models.ChargeBacks` namespace contains 3 named types.
 The `MyJetWallet.Circle` namespace contains 5 named types.
 
 - 5 named types.
-- 1,498 total lines of source code.
-- Approximately 322 lines of executable code.
+- 1,504 total lines of source code.
+- Approximately 325 lines of executable code.
 - The highest cyclomatic complexity is 6 :heavy_check_mark:.
 
 <details>
@@ -762,21 +762,21 @@ The `MyJetWallet.Circle` namespace contains 5 named types.
 </summary>
 <br>
 
-- The `CircleClient` contains 75 members.
-- 933 total lines of source code.
-- Approximately 198 lines of executable code.
+- The `CircleClient` contains 76 members.
+- 939 total lines of source code.
+- Approximately 201 lines of executable code.
 - The highest cyclomatic complexity is 4 :heavy_check_mark:.
 
 | Member kind | Line number | Maintainability index | Cyclomatic complexity | Depth of inheritance | Class coupling | Lines of source / executable code |
 | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L35' title='object CircleClient._gate'>35</a> | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
-| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L32' title='HttpClient CircleClient._httpClient'>32</a> | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
-| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L34' title='HttpClient CircleClient._lastHttpClient'>34</a> | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
-| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L33' title='DateTime CircleClient._lastHttpSetupTime'>33</a> | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L41' title='CircleClient.CircleClient(string accessToken, CircleNetwork network = CircleNetwork.Main)'>41</a> | 76 | 2 :heavy_check_mark: | 0 | 1 | 9 / 3 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L47' title='CircleClient.CircleClient(string accessToken, string apiRootUrl)'>47</a> | 72 | 3 :heavy_check_mark: | 0 | 3 | 13 / 5 |
-| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L28' title='SecureString CircleClient.AccessToken'>28</a> | 100 | 2 :heavy_check_mark: | 0 | 1 | 1 / 0 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L110' title='string CircleClient.ConvertToQueryString(Dictionary<string, object> nvc)'>110</a> | 72 | 2 :heavy_check_mark: | 0 | 3 | 10 / 5 |
+| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L36' title='object CircleClient._gate'>36</a> | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
+| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L33' title='HttpClient CircleClient._httpClient'>33</a> | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
+| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L35' title='HttpClient CircleClient._lastHttpClient'>35</a> | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
+| Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L34' title='DateTime CircleClient._lastHttpSetupTime'>34</a> | 100 | 0 :heavy_check_mark: | 0 | 1 | 1 / 0 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L42' title='CircleClient.CircleClient(string accessToken, CircleNetwork network = CircleNetwork.Main)'>42</a> | 76 | 2 :heavy_check_mark: | 0 | 1 | 9 / 3 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L48' title='CircleClient.CircleClient(string accessToken, string apiRootUrl)'>48</a> | 72 | 3 :heavy_check_mark: | 0 | 3 | 13 / 5 |
+| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L29' title='SecureString CircleClient.AccessToken'>29</a> | 100 | 2 :heavy_check_mark: | 0 | 1 | 1 / 0 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L111' title='string CircleClient.ConvertToQueryString(Dictionary<string, object> nvc)'>111</a> | 72 | 2 :heavy_check_mark: | 0 | 3 | 10 / 5 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.WireTransfers.cs#L40' title='Task<WebCallResult<BankAccountInfo>> CircleClient.CreateBankAccountSepaAsync(string idempotencyKey, string iban, BillingDetails billingDetails, BankAddress bankAddress, CancellationToken cancellationToken = null)'>40</a> | 73 | 1 :heavy_check_mark: | 0 | 8 | 17 / 3 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.WireTransfers.cs#L20' title='Task<WebCallResult<BankAccountInfo>> CircleClient.CreateBankAccountUsSwiftAsync(string idempotencyKey, string accountNumber, string routingNumber, BillingDetails billingDetails, BankAddress bankAddress, CancellationToken cancellationToken = null)'>20</a> | 72 | 1 :heavy_check_mark: | 0 | 8 | 28 / 3 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.BusinessAccount.cs#L49' title='Task<WebCallResult<DepositAddressInfo>> CircleClient.CreateBusinessDepositAddressesAsync(string idempotencyKey, string currency, string chain, CancellationToken cancellationToken = null)'>49</a> | 74 | 1 :heavy_check_mark: | 0 | 6 | 10 / 3 |
@@ -793,13 +793,13 @@ The `MyJetWallet.Circle` namespace contains 5 named types.
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.OnChain.cs#L86' title='Task<WebCallResult<PaymentInfo>> CircleClient.CreateTransferAsync(string idempotencyKey, string sourceId, string sourceType, string dstType, string dstAddress, string dstAddressTag, string dstChain, string amount, string currency, CancellationToken cancellationToken = null)'>86</a> | 70 | 1 :heavy_check_mark: | 0 | 5 | 28 / 3 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Transfers.cs#L12' title='Task<WebCallResult<TransferInfo>> CircleClient.CreateTransferV2Async(string idempotencyKey, string amount, string currency, string sourceId, string address, string addressTag, string destinationChain, CancellationToken cancellationToken = null)'>12</a> | 70 | 1 :heavy_check_mark: | 0 | 9 | 27 / 3 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Wallets.cs#L14' title='Task<WebCallResult<WalletInfo>> CircleClient.CreateWalletAsync(string idempotencyKey, string description, CancellationToken cancellationToken = null)'>14</a> | 74 | 1 :heavy_check_mark: | 0 | 6 | 12 / 3 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L168' title='Task<WebCallResult<T>> CircleClient.DeleteAsync<T>(string url, object obj = null, CancellationToken cancellationToken = null)'>168</a> | 63 | 2 :heavy_check_mark: | 0 | 7 | 13 / 9 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L203' title='void CircleClient.Dispose()'>203</a> | 81 | 4 :heavy_check_mark: | 0 | 3 | 8 / 3 |
-| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L26' title='string CircleClient.EndpointUrl'>26</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 3 / 0 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L182' title='WebCallResult<T> CircleClient.EvaluateResponse<T>(HttpResponseMessage response, string content)'>182</a> | 79 | 2 :heavy_check_mark: | 0 | 3 | 10 / 4 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L174' title='Task<WebCallResult<T>> CircleClient.DeleteAsync<T>(string url, object obj = null, CancellationToken cancellationToken = null)'>174</a> | 63 | 2 :heavy_check_mark: | 0 | 7 | 13 / 9 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L209' title='void CircleClient.Dispose()'>209</a> | 81 | 4 :heavy_check_mark: | 0 | 3 | 8 / 3 |
+| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L27' title='string CircleClient.EndpointUrl'>27</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 3 / 0 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L188' title='WebCallResult<T> CircleClient.EvaluateResponse<T>(HttpResponseMessage response, string content)'>188</a> | 79 | 2 :heavy_check_mark: | 0 | 3 | 10 / 4 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.OnChain.cs#L35' title='WebCallResult<BlockchainAddress> CircleClient.GenerateAddress(string id, string idempotencyKey, string currency, string chain, CancellationToken cancellationToken = null)'>35</a> | 81 | 1 :heavy_check_mark: | 0 | 5 | 14 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.OnChain.cs#L39' title='Task<WebCallResult<BlockchainAddress>> CircleClient.GenerateAddressAsync(string id, string idempotencyKey, string currency, string chain, CancellationToken cancellationToken = null)'>39</a> | 75 | 1 :heavy_check_mark: | 0 | 5 | 11 / 3 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L121' title='Task<WebCallResult<T>> CircleClient.GetAsync<T>(string url, CancellationToken cancellationToken = null)'>121</a> | 71 | 1 :heavy_check_mark: | 0 | 5 | 10 / 5 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L122' title='Task<WebCallResult<T>> CircleClient.GetAsync<T>(string url, CancellationToken cancellationToken = null)'>122</a> | 67 | 2 :heavy_check_mark: | 0 | 5 | 15 / 7 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.BusinessAccount.cs#L19' title='Task<WebCallResult<BalanceInfo>> CircleClient.GetBalanceAsync(CancellationToken cancellationToken = null)'>19</a> | 82 | 1 :heavy_check_mark: | 0 | 5 | 4 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.BusinessAccount.cs#L60' title='Task<WebCallResult<DepositAddressInfo[]>> CircleClient.GetBusinessDepositAddressesAsync(CancellationToken cancellationToken = null)'>60</a> | 82 | 1 :heavy_check_mark: | 0 | 4 | 4 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.BusinessAccount.cs#L65' title='Task<WebCallResult<DepositInfo[]>> CircleClient.GetBusinessDepositsAsync(string pageAfter, int pageSize, CancellationToken cancellationToken = null)'>65</a> | 75 | 2 :heavy_check_mark: | 0 | 4 | 6 / 3 |
@@ -811,7 +811,7 @@ The `MyJetWallet.Circle` namespace contains 5 named types.
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.OnChain.cs#L15' title='WebCallResult<Configuration> CircleClient.GetConfiguration(CancellationToken cancellationToken = null)'>15</a> | 86 | 1 :heavy_check_mark: | 0 | 5 | 6 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.OnChain.cs#L18' title='Task<WebCallResult<Configuration>> CircleClient.GetConfigurationAsync(CancellationToken cancellationToken = null)'>18</a> | 82 | 1 :heavy_check_mark: | 0 | 5 | 5 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.BusinessAccount.cs#L14' title='Task<WebCallResult<ConfigurationInfo>> CircleClient.GetConfigurationInfoAsync(CancellationToken cancellationToken = null)'>14</a> | 82 | 1 :heavy_check_mark: | 0 | 5 | 7 / 2 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L77' title='HttpClient CircleClient.GetHttpClient()'>77</a> | 74 | 3 :heavy_check_mark: | 0 | 3 | 16 / 4 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L78' title='HttpClient CircleClient.GetHttpClient()'>78</a> | 74 | 3 :heavy_check_mark: | 0 | 3 | 16 / 4 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Cards.cs#L110' title='WebCallResult<List<CardInfo>> CircleClient.GetListOfCards(string pageBefore, string pageAfter, int pageSize, CancellationToken cancellationToken = null)'>110</a> | 81 | 1 :heavy_check_mark: | 0 | 6 | 14 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Cards.cs#L117' title='Task<WebCallResult<List<CardInfo>>> CircleClient.GetListOfCardsAsync(string pageBefore, string pageAfter, int pageSize, CancellationToken cancellationToken = null)'>117</a> | 74 | 1 :heavy_check_mark: | 0 | 7 | 15 / 3 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Subscriptions.cs#L18' title='WebCallResult<List<Subscription>> CircleClient.GetListOfSubscriptions(CancellationToken cancellationToken = null)'>18</a> | 86 | 1 :heavy_check_mark: | 0 | 6 | 9 / 2 |
@@ -831,17 +831,18 @@ The `MyJetWallet.Circle` namespace contains 5 named types.
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Wallets.cs#L31' title='Task<WebCallResult<WalletInfo[]>> CircleClient.GetWalletsAsync(string pageAfter, int pageSize, CancellationToken cancellationToken = null)'>31</a> | 75 | 2 :heavy_check_mark: | 0 | 4 | 6 / 3 |
 | Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L18' title='string CircleClient.MainPublicApi'>18</a> | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.WireTransfers.cs#L58' title='Task<WebCallResult<BankWireTransferDetail>> CircleClient.ObtainBankWireTransferDetailsAsync(string bankAccountId, CancellationToken cancellationToken = null)'>58</a> | 81 | 1 :heavy_check_mark: | 0 | 5 | 6 / 2 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L132' title='Task<WebCallResult<T>> CircleClient.PostAsync<T>(string url, object obj = null, CancellationToken cancellationToken = null)'>132</a> | 63 | 3 :heavy_check_mark: | 0 | 6 | 17 / 9 |
-| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L21' title='bool CircleClient.PrintPostApiCalls'>21</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 1 / 1 |
-| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L22' title='bool CircleClient.PrintPutApiCalls'>22</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 1 / 1 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L150' title='Task<WebCallResult<T>> CircleClient.PutAsync<T>(string url, object obj = null, CancellationToken cancellationToken = null)'>150</a> | 63 | 3 :heavy_check_mark: | 0 | 6 | 17 / 9 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L138' title='Task<WebCallResult<T>> CircleClient.PostAsync<T>(string url, object obj = null, CancellationToken cancellationToken = null)'>138</a> | 63 | 3 :heavy_check_mark: | 0 | 6 | 17 / 9 |
+| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L21' title='bool CircleClient.PrintGetApiCalls'>21</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 1 / 1 |
+| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L22' title='bool CircleClient.PrintPostApiCalls'>22</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 1 / 1 |
+| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L23' title='bool CircleClient.PrintPutApiCalls'>23</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 1 / 1 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L156' title='Task<WebCallResult<T>> CircleClient.PutAsync<T>(string url, object obj = null, CancellationToken cancellationToken = null)'>156</a> | 63 | 3 :heavy_check_mark: | 0 | 6 | 17 / 9 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Subscriptions.cs#L54' title='WebCallResult<string> CircleClient.RemoveSubscription(string id, CancellationToken cancellationToken = null)'>54</a> | 84 | 1 :heavy_check_mark: | 0 | 4 | 8 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Subscriptions.cs#L57' title='Task<WebCallResult<string>> CircleClient.RemoveSubscriptionAsync(string id, CancellationToken cancellationToken = null)'>57</a> | 80 | 1 :heavy_check_mark: | 0 | 4 | 6 / 2 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L65' title='void CircleClient.SetAccessToken(string accessToken)'>65</a> | 85 | 2 :heavy_check_mark: | 0 | 3 | 11 / 2 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L90' title='void CircleClient.SetupHttpClient()'>90</a> | 64 | 2 :heavy_check_mark: | 0 | 9 | 19 / 9 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L66' title='void CircleClient.SetAccessToken(string accessToken)'>66</a> | 85 | 2 :heavy_check_mark: | 0 | 3 | 11 / 2 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L91' title='void CircleClient.SetupHttpClient()'>91</a> | 64 | 2 :heavy_check_mark: | 0 | 9 | 19 / 9 |
 | Field | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L19' title='string CircleClient.TestPublicApi'>19</a> | 93 | 0 :heavy_check_mark: | 0 | 0 | 1 / 1 |
-| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L193' title='void CircleClient.ThrowErrorExceptionIfEnabled(HttpStatusCode code, string message)'>193</a> | 85 | 2 :heavy_check_mark: | 0 | 3 | 7 / 2 |
-| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L30' title='bool CircleClient.ThrowThenErrorResponse'>30</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 1 / 1 |
+| Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L199' title='void CircleClient.ThrowErrorExceptionIfEnabled(HttpStatusCode code, string message)'>199</a> | 85 | 2 :heavy_check_mark: | 0 | 3 | 7 / 2 |
+| Property | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.cs#L31' title='bool CircleClient.ThrowThenErrorResponse'>31</a> | 100 | 2 :heavy_check_mark: | 0 | 0 | 1 / 1 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Cards.cs#L162' title='WebCallResult<CardInfo> CircleClient.UpdateCard(string id, string keyId, string encryptedData, int expMonth, int expYear, CancellationToken cancellationToken = null)'>162</a> | 80 | 1 :heavy_check_mark: | 0 | 5 | 18 / 2 |
 | Method | <a href='https://github.com/MyJetWallet/MyJetWallet.Circle/blob/master/src/Circle/CircleClient.Cards.cs#L171' title='Task<WebCallResult<CardInfo>> CircleClient.UpdateCardAsync(string id, string keyId, string encryptedData, int expMonth, int expYear, CancellationToken cancellationToken = null)'>171</a> | 73 | 1 :heavy_check_mark: | 0 | 6 | 17 / 3 |
 
@@ -3343,6 +3344,7 @@ class CircleClient{
     -DateTime _lastHttpSetupTime
     -HttpClient _lastHttpClient
     -object _gate
+    +bool PrintGetApiCalls$
     +bool PrintPostApiCalls$
     +bool PrintPutApiCalls$
     +string EndpointUrl
